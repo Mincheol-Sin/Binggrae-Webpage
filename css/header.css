@@ -1,7 +1,8 @@
-body{
+body {
   font-family: 'Noto Sans KR', sans-serif;
 }
-header::before{
+
+header::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -10,7 +11,8 @@ header::before{
   top: 27px;
   z-index: 1;
 }
-header div.inner{ /* 하위선택자  */
+
+header div.inner { 
   width: 1200px;
   margin: 0 auto;  
   display: flex;
@@ -22,49 +24,35 @@ header div.inner{ /* 하위선택자  */
   margin-top: 28px;
 }
 
-header .inner,
-header .inner>*{ /* > 자식선택자를 의미 */
-/*   border: 1px solid #333; */
-}
-header .inner {
-    
-  }
-  header .inner h1 {
-    
-  }
-  header .inner h1 a {
+header div.inner h1 a {
   background-image: url(../img/logo-pc.png);
   width: 142px;
   height: 35px;
   display: block;
   font-size: 0;
-  }
-  header .inner ul.gnb {
+}
+
+header div.inner ul.gnb {
   display: flex;
   gap: 15px;
-  }
-  header .inner ul.gnb li {
-    
-  }
-  header .inner ul.gnb li a {
-    
+}
+
+
+header div.inner ul.gnb li a {
   font-weight: 400;
-  }
-  header .inner ul.enb {
-    display: flex; 
-    gap: 15px;
-  }
-  header .inner ul.enb li {
-    
-  }
-  header .inner ul.enb li select {
+}
+
+header .inner ul.enb {
+  display: flex; 
+  gap: 15px;
+}
+  
+header .inner ul.enb li select {
   background-color: transparent;
   border: none;
-  }
-  header .inner ul.enb li select option{
-    
-  }
-  header .inner ul.enb li a{
+}
+  
+header .inner ul.enb li a {
   font-size: 0;
   width: 20px;
   height: 13px;
@@ -73,39 +61,34 @@ header .inner {
   border-bottom: 3px solid #666;
   display: flex;
   align-items: center;
-  }
-  header .inner ul.enb li a::before{
+}
+
+header .inner ul.enb li a::before {
   content: "";
-  /*! border-top: 3px solid #666; */
   width: 100%;
   display: block;
   height: 3px;
   background-color: #666;
-  }
-  header .inner ul.tnb{
+}
+
+header .inner ul.tnb {
   position: absolute;
   right: 0;
   top: -23px;
   font-size: 12px;
   display: flex;
   gap: 14px;
-  }
-  header .inner ul.tnb li{
+}
 
-  }
-  header .inner ul.tnb li a{
-
-  }
-  header .inner ul.tnb li a::after{
+header .inner ul.tnb li a::after {
   content: "";
-    
   background-image: url(../img/openinnew.svg);
   width: 17px;
   height: 17px;
   display: inline-block;
   background-size: contain;
   vertical-align: -4px;
-  }
+}
 
 
 
