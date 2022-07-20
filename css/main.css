@@ -1,0 +1,75 @@
+#taste .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+#taste .inner h2.h2 {
+  margin-bottom: 50px;
+}
+
+#taste .inner ul.list {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  gap: 10px;
+  text-align: center;
+  flex-wrap: wrap;
+  row-gap: 40px;
+}
+
+#taste .inner ul.list li {
+  width: calc((100% / 6) - (50px / 6));
+  box-sizing: border-box;
+}
+
+#taste .inner ul.list li::before {
+  content: "";
+  display: block;
+  width: 100%;
+  background-color: yellow;
+  height: 262px;
+  border-radius: 6px;
+  margin-bottom: 11px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#taste .inner ul.list li:nth-child(1)::before {
+  background-image: url(../img/1.png);
+  background-color: #efe4db;
+}
+
+#taste .inner ul.list li:nth-child(2)::before {
+  background-image: url(../img/2.png);
+  background-color: #f6efe0;
+}
+
+#taste .inner ul.list li:nth-child(3)::before {
+  background-image: url(../img/3.png);
+  background-color: #f9e5e5;
+}
+
+#taste .inner ul.list li:nth-child(4)::before {
+  background-image: url(../img/4.png);
+  background-color: #ededed;
+}
+
+#taste .inner ul.list li:nth-child(5)::before {
+  background-image: url(../img/5.png);
+  background-color: #e4f3f9;
+}
+
+#taste .inner ul.list li:nth-child(6)::before {
+  background-image: url(../img/6.png);
+  background-color: #fcf4e5;
+}
+
+#taste .inner ul.list li a {
+  width: 100%;
+  display: block;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  line-height: 1.9;
+}

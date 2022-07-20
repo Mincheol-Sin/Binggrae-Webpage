@@ -1,5 +1,11 @@
 body {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
 }
 
 header::before {
@@ -7,51 +13,53 @@ header::before {
   position: absolute;
   width: 100%;
   border: 1px solid #ccc;
-  left:0;
+  left: 0;
   top: 27px;
   z-index: 1;
 }
 
-header div.inner { 
-  width: 1200px;
-  margin: 0 auto;  
+header div.inner {
   display: flex;
   justify-content: space-between;
   height: 88px;
   align-items: center;
   position: relative;
-  background-color: #eee;
   margin-top: 28px;
 }
 
-header div.inner h1 a {
-  background-image: url(../img/logo-pc.png);
+header .inner h1 a {
+  background-image: url("../img/logo-pc.png");
   width: 142px;
   height: 35px;
   display: block;
   font-size: 0;
 }
 
-header div.inner ul.gnb {
+header .inner ul.gnb {
+  display: flex;
+  /*! gap: 15px; */
+}
+
+header .inner ul.gnb li a {
+  font-weight: 400;
+  padding: 20px 16px;
+  display: block;
+}
+
+header .inner ul.gnb li a:hover {
+  color: red;
+}
+
+header .inner ul.enb {
   display: flex;
   gap: 15px;
 }
 
-
-header div.inner ul.gnb li a {
-  font-weight: 400;
-}
-
-header .inner ul.enb {
-  display: flex; 
-  gap: 15px;
-}
-  
 header .inner ul.enb li select {
   background-color: transparent;
   border: none;
 }
-  
+
 header .inner ul.enb li a {
   font-size: 0;
   width: 20px;
@@ -82,15 +90,10 @@ header .inner ul.tnb {
 
 header .inner ul.tnb li a::after {
   content: "";
-  background-image: url(../img/openinnew.svg);
+  background-image: url("../img/openinnew.svg");
   width: 17px;
   height: 17px;
   display: inline-block;
   background-size: contain;
   vertical-align: -4px;
 }
-
-
-
-
-
