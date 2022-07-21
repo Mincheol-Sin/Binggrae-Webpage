@@ -1,10 +1,4 @@
-#taste .inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 20px;
-}
-
+/* 빙그레맛 */
 #taste .inner h2.h2 {
   margin-bottom: 50px;
 }
@@ -22,6 +16,11 @@
 #taste .inner ul.list li {
   width: calc((100% / 6) - (50px / 6));
   box-sizing: border-box;
+  transition: all 0.5s ease;
+}
+
+#taste .inner ul.list li:hover {
+  transform: translateY(-15px);
 }
 
 #taste .inner ul.list li::before {
@@ -72,4 +71,126 @@
   background-color: #f9f9f9;
   border-radius: 6px;
   line-height: 1.9;
+  position: relative;
+  overflow: hidden;
+}
+
+#taste .inner ul.list li a::before {
+  content: "VIEW MORE";
+  display: block;
+  background-color: red;
+  color: white;
+  position: absolute;
+  width: 100%;
+  display: none;
+}
+
+#taste .inner ul.list li:hover a::before {
+  display: block;
+}
+
+/* 브랜드샵 */
+
+#shop .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#shop .inner h2 {
+  margin-bottom: 50px;
+}
+
+#shop .inner ul.list {
+  width: 90%;
+  gap: 10px;
+}
+
+#shop .inner ul.list li {
+  border-radius: 40px;
+  border: 1px solid #e1dbdb;
+  width: calc(100% / 6);
+  height: 261px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+#shop .inner ul.list li:hover > * {
+  display: block;
+}
+
+#shop .inner ul.list li > *:not(h3) {
+  display: none;
+}
+
+#shop .inner ul.list li h3 {
+  font-size: 0;
+}
+
+#shop .inner ul.list li h3 img {
+  transition: all 0.5s;
+}
+
+#shop .inner ul.list li p {
+  line-height: 1.5;
+  text-align: center;
+}
+
+#shop .inner ul.list li p::before {
+  content: "";
+  width: 60px;
+  display: block;
+  border-top: 2px solid #ccc;
+  margin: 0 auto;
+  margin-bottom: 16px;
+}
+
+#shop .inner ul.list li a {
+  background-color: red;
+  color: white;
+  width: 90%;
+  line-height: 2;
+  border-radius: 16px;
+  text-align: center;
+}
+
+#shop .inner ul.list li:hover > *:not(a) {
+  animation-name: fadeUp;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  /*   animation-direction: reverse; */
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+#shop .inner ul.list li:hover img {
+  transform: scale(0.7);
+}
+
+#shop .inner ul.list li:hover a {
+  animation-name: shopFadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes shopFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
