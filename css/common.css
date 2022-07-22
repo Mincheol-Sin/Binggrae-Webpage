@@ -40,13 +40,20 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .innerPadding {
-  /* 카멜케이스방식:첫자소문자로시작..다른단어첫자는 대문자로시작 */
+  /* 移대찞耳댁뒪諛⑹떇:泥レ옄뚮Ц먮줈쒖옉..ㅻⅨ⑥뼱泥レ옄 臾몄옄濡쒖떆 */
   padding-top: 20px;
   padding-bottom: 60px;
 }
 
+/* hn쒓렇ㅽ쇰쭅 */
 .h2 {
   font-size: 35px;
+  font-weight: 700;
+  font-family: "Binggrae-Bold";
+}
+
+.h3 {
+  font-size: 31px;
   font-weight: 700;
   font-family: "Binggrae-Bold";
 }
@@ -60,6 +67,14 @@ textarea:focus:-ms-input-placeholder {
   justify-content: space-between;
 }
 
+.flexAround {
+  justify-content: space-around;
+}
+
+.flexEvenly {
+  justify-content: space-evenly;
+}
+
 .flexCenter {
   justify-content: center;
 }
@@ -70,6 +85,10 @@ textarea:focus:-ms-input-placeholder {
 
 .flexAlignCenter {
   align-items: center;
+}
+
+.flexWrap {
+  flex-wrap: wrap;
 }
 
 .br {

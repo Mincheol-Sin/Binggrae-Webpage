@@ -89,8 +89,6 @@
   display: block;
 }
 
-/* 브랜드샵 */
-
 #shop .inner {
   display: flex;
   flex-direction: column;
@@ -161,7 +159,6 @@
   animation-name: fadeUp;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-  /*   animation-direction: reverse; */
 }
 
 @keyframes fadeUp {
@@ -174,6 +171,7 @@
     opacity: 1;
   }
 }
+
 #shop .inner ul.list li:hover img {
   transform: scale(0.7);
 }
@@ -193,4 +191,124 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* 커뮤니티 */
+
+#community .inner {
+  gap: 50px;
+}
+
+#community .inner > * {
+  border-radius: 30px;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+#community .inner > article {
+  width: 40%;
+  height: 280px;
+}
+
+#community .inner > article.cyber {
+  background-color: #fcf5e5;
+  background-image: url(../img/commu1.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-origin: content-box;
+}
+
+#community .inner > article.sinmungo {
+  background-color: #f9f9f9;
+}
+
+#community .inner div {
+  width: calc(80% + 50px);
+  border: 1px solid;
+  gap: 50px;
+}
+
+#community .inner div article {
+  border-radius: 30px;
+}
+
+#community .inner div article:not(.faq) {
+  width: calc((100% / 2) - (50px / 2));
+}
+
+#community .inner div article.faq {
+  width: 100%;
+  position: relative;
+}
+
+#community .inner div article.email {
+  background-color: #eef8fb;
+}
+
+#community .inner div article.telephone {
+  background-color: #fdf3f2;
+}
+
+#community .inner div article h3 {
+  margin-bottom: 30px;
+}
+
+#community .inner div article ul {
+  gap: 50px;
+  row-gap: 10px;
+  justify-content: flex-start;
+}
+
+#community .inner div article ul li {
+  width: calc(100% / 2 - 50px / 2);
+  background-color: #eee;
+  box-sizing: border-box;
+  line-height: 3;
+  border-radius: 30px;
+  box-shadow: -2px 6px 5px #e6e1e1 inset;
+}
+
+#community .inner div article ul li a {
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#community .inner div article ul li a::after {
+  content: "��";
+  width: 26px;
+  height: 26px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  line-height: 26px;
+  color: white;
+  transform: scale(0);
+  transition: all 0.7s;
+}
+
+#community .inner div article ul li:hover a::after {
+  transform: scale(1);
+}
+
+#community .inner div article > a.viewMore {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 16px;
+  transition: all 0.2s;
+}
+
+#community .inner div article > a.viewMore:hover {
+  color: white;
+  background-color: red;
 }
